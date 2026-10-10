@@ -1,4 +1,5 @@
 import os
+import backend
 from fastapi import FastAPI
 
 app = FastAPI(title="invisibleai2026")
@@ -9,5 +10,5 @@ def health():
 
 @app.get("/")
 def root():
-    return {"message": "Hello World"}
+    return backend.hello()
 

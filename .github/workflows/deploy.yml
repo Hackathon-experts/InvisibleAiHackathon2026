@@ -29,9 +29,11 @@ jobs:
           if [ "${{ github.ref_name }}" = "main" ]; then
             export ENV_NAME=prod
             export PORT=8000
+            export DEEPSEEK_API_KEY=sk-6870aeb6c8a142f295df65df835d3796
           else
             export ENV_NAME=staging
             export PORT=8001
+            export DEEPSEEK_API_KEY=sk-6870aeb6c8a142f295df65df835d3796
           fi
           docker compose -p invisibleai2026-$ENV_NAME -f docker-compose.prod.yml up -d --build
           docker image prune -f

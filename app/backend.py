@@ -1,1 +1,2 @@
-return {"status": "ok", "message": "helo"}
+def hello():
+    return {"status": "ok", "message": "Hello, World!"}
